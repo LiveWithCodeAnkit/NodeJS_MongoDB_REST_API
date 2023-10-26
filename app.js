@@ -7,7 +7,7 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 const port = process.env.PORT || 5000;
-// const product_route = require("./routes/products");
+
 const database = require("./utils/database");
 
 const profile_route = require("./routes/profile");
@@ -36,15 +36,6 @@ app.get("/blog", (req, res) => {
     `<h1 style="color:red;">Hello Blog, My name is <br> LiveWithCodeAnkit</h1>`
   );
 });
-
-// app.use("/api/products/", product_route);
-// app.use("/api/products/create", product_route);
-
-// app.put("/api/products/update/:id", product_route);
-
-// app.delete("/api/products/delete/:id", product_route);
-
-// app.use("/api/products", product_route);
 
 app.use("/api/shop", shop_route);
 
